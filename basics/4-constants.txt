@@ -1,0 +1,25 @@
+package main
+
+/*
+Constants are declared with the "const" keyword and they can't use the ":=" declaration syntax.
+Constants can be primitive data types, such as integers, floats, booleans, and strings.
+They can't be more complex, such as, for example, slices, maps, or structs.
+Constants are usually declared with a static value and can't be changed after they have been declared.
+*/
+
+import "fmt"
+
+func main() {
+	const basicPlan = "Basic Plan"
+	const premiumPlan = "Premium Plan"
+
+	fmt.Println("Current plan:", basicPlan)
+	fmt.Println("Switching to:", premiumPlan)
+
+	// however, constants can also be computed at compile type
+	const firstName = "Steven"
+	const lastName = "Wilson"
+	const fullName = firstName + " " + lastName
+
+	fmt.Println("Name:", fullName)
+}
