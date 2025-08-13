@@ -1,0 +1,32 @@
+package main
+
+/*
+GO supports the following data types:
+
+1) Integers (int):
+	a) Whole numbers: int, int8, int16, int32, int64)
+	b) Positive whole numbers (uint8, uint16, uint21, uint64, uintptr)
+2) Floating point numbers (float32, float64)
+3) Complex numbers (complex64, complex128)
+4) Booleans (true, false)
+5) Strings (string)
+
+NOTE: It's better to always stick to "default" data types, which are int, uint, and float64
+
+There are also many other data type in GO, which we will take a look at later
+*/
+
+import "fmt"
+
+func main() {
+	var signedInteger int = 7
+	var floatingPointNumber float64 = 3.14159
+	var message string= "Hello there"
+
+	fmt.Printf("This is an integer: %d\n", signedInteger)
+	fmt.Printf("This is a float: %f\n", floatingPointNumber)
+	fmt.Printf("This is a string: %s\n", message)
+
+	// and we can also convert between data types
+	fmt.Printf("It was a float (%f), but now it's an integer (%d)", floatingPointNumber, int(floatingPointNumber))
+}
