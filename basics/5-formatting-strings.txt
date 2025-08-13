@@ -1,0 +1,34 @@
+package main
+
+/*
+fmt.Println prints a string to standard output.
+fmt.Printf prints formatted string to standard output.
+fmt.Sprintf return the formatted string.
+
+Used representations:
+1) %v - prints the GO syntax representation of a value; it's a nice default
+2) %s - prints a string
+3) %d - prints an integer
+4) %f - prints a float (use %.2f to round a float to 2 decimal places)
+*/
+
+import "fmt"
+
+func main() {
+	defaultInt := 10
+	defaultString := "Hi there!"
+	anInt := 14
+	aFloat := 3.14159
+	aString := "Hey again!"
+
+	fmt.Printf("Printing an integer using 'default': %v\n", defaultInt)
+	fmt.Printf("Printing a string using 'default': %v\n", defaultString)
+	fmt.Printf("Printing an integer using type specification: %d\n", anInt)
+	fmt.Printf("Printing a float using type specification: %f\n", aFloat)
+	fmt.Printf("Printing a string using type specification: %s\n", aString)
+
+	// now let's see how fmt.Sprintf works
+	s := fmt.Sprintf("Pi equals %f", aFloat)
+
+	fmt.Println(s)
+}
