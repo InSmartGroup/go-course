@@ -1,0 +1,22 @@
+package main
+
+/*
+GO has a special type, "rune", which is an alias for int32. This means that a rune is a 32-bit integer, which is large enough to hold any Unicode code point.
+When you need to work with individual characters in a string, you should use the rune type.
+It breaks strings up into their individual characters, which can be more than one byte long.
+ */
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
+
+func main() {
+	name1 := "Steven"
+	fmt.Printf("Byte length: %d\n", len(name1))  // "Steven" has 6 characters and it equals 6 bytes
+	fmt.Printf("Rune length: %d\n", utf8.RuneCountInString(name1))  // so it has 6 rune count
+
+	name2 := "🐻"
+	fmt.Printf("Byte length: %d\n", len(name2)) // now it's 1 character long, but equals 4 bytes
+	fmt.Printf("Rune length: %d\n", utf8.RuneCountInString(name2)) // but the rune count is 1
+}
