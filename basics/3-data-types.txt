@@ -22,10 +22,12 @@ func main() {
 	var signedInteger int = 7
 	var floatingPointNumber float64 = 3.14159
 	var message string= "Hello there"
+	var boo = false
 
 	fmt.Printf("This is an integer: %d\n", signedInteger)
 	fmt.Printf("This is a float: %f\n", floatingPointNumber)
 	fmt.Printf("This is a string: %s\n", message)
+	fmt.Printf("This is a boolean: %t\n", boo)
 
 	// and we can also convert between data types
 	fmt.Printf("It was a float (%f), but now it's an integer (%d)", floatingPointNumber, int(floatingPointNumber))
