@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// functions in GO can take zero or more arguments
+// to make the code easier to read, the variable type comes after its name
+// at the end we also need to define a data type that the function returns
+
+func someFunc(name string, age int) string {
+	return fmt.Sprintf("%s is %d years old", name, age)
+}
+
+// when function contains multiple arguments of same type, we can specify it just once - after the last argument
+func addFloats(f1, f2, f3 float64) float64 {
+	return f1 + f2 + f3
+}
+
+func main() {
+	//our first function output
+	result := someFunc("Steve", 26)
+	fmt.Println(result)
+
+	// our second function output
+	fmt.Println(addFloats(0.2, 7.1, 3.14159))
+}
