@@ -1,0 +1,38 @@
+package main
+
+/*
+Switch statements are a way to compare a value against multiple options.
+They are similar to if-else statements but are more concise and readable when the number of options is more than 2.
+
+Let's say we need to compare a plan price.
+*/
+
+import "fmt"
+
+func planCompare(plan string) float64 {
+	switch plan {
+	case "basic":
+		return 10.0
+	case "pro":
+		return 20.0
+	case "enterprise":
+		return 50.0
+	default:
+		return 0.0
+	}
+}
+
+
+func main() {
+	plan := "basic"
+	fmt.Printf("Current plan: %s. Plan cost: %.2f\n", plan, planCompare(plan))
+
+	plan = "pro"
+	fmt.Printf("Current plan: %s. Plan cost: %.2f\n", plan, planCompare(plan))
+
+	plan = "enterprise"
+	fmt.Printf("Current plan: %s. Plan cost: %.2f\n", plan, planCompare(plan))
+
+	plan = "unknown"
+	fmt.Printf("Current plan: %s. Plan cost: %.2f\n", plan, planCompare(plan))
+}
