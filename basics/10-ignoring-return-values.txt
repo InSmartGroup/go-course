@@ -1,0 +1,22 @@
+package main
+
+/*
+A function can return a value that we don't care about.
+We can ignore variables by using an underscore.
+In GO, the blank identifier isn't just a convention, but a real language feature that completely discards the value.
+The GO compiler will throw an error if you have any unused variable declarations in your code, so you need to ignore anything you don't intend to use.
+*/
+
+import "fmt"
+
+func ignore() (x, y int) {
+	return 3, 7
+}
+
+func main() {
+	a, _ := ignore()
+	_, b := ignore()
+
+	fmt.Println(a)
+	fmt.Println(b)
+}
